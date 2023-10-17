@@ -1,0 +1,425 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Archivo', sans-serif;
+}
+
+/*Sección que contiene los iconos de menú, usuarios, el logo; y los botones de idioma, inicio de sesión, registro*/
+.encabezado {
+    background: rgb(62,62,62);
+    background: radial-gradient(circle, rgb(36, 36, 36) 0%, rgb(13, 13, 13) 100%);
+    height: 115px;
+
+    /* Divicisión del encabezado de menú, usuario y el logo*/
+
+    .encabezado_superior {
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 30px;
+        color: goldenrod;
+        
+
+        /*Icono Menú*/    
+        .encabezado_izquierda {
+            position: relative;
+            left: 157px;
+            cursor: pointer;
+
+            .fa-bars:hover {
+                color: silver;
+            }
+        }
+        
+        /*Logo*/
+        .encabezado_centro {
+            position: relative;
+            left: 100px;
+
+            .encabezado_logo {
+                height: 75px;
+                cursor: pointer;
+                }
+        }
+            
+
+        /*Icono Usuario*/
+        .encabezado_derecha {
+            width: 250px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            right: 60px;
+            cursor: pointer;
+            padding: 6px 7px;
+            align-items: center;
+
+            .fa-bell {
+                padding: 6px 7px;
+            }
+
+            .fa-bell:hover {
+                color: silver;
+                border-color: silver;
+            }
+
+            .fa-envelope {
+                padding: 6px 7px;
+            }
+
+            .fa-envelope:hover {
+                color: silver;
+                border-color: silver;
+            }
+
+            .fa-user {
+                border-radius: 50%;
+                border: 2px solid goldenrod;
+                width: 45px;
+                height: 45px;
+                object-fit: cover;
+                object-position: center top;
+            }
+
+            .fa-user:hover {
+                
+                border-color: silver;
+            }
+            
+            
+        }
+
+        
+    }
+
+    /*División de los botones idioma, inicio de sesión y registro*/    
+    .listado {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        font-weight: bold;
+        align-items: center;
+        
+        
+        /*Botón Idioma*/
+       #pais {
+            background: linear-gradient(90deg, rgba(218, 165, 32, 0.95) 25%, rgba(255, 255, 255, 0.80) 90%);
+            padding: 6px 15px;
+            position: relative;
+            left: 90px;
+            cursor: pointer;
+            border-radius: 15px;
+            opacity: 0.85;
+            color: black;
+            border: 2.7px solid rgb(0, 0, 0);
+       }
+
+       #pais:hover {
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.80) 25%, rgba(218,165, 32, 0.95) 90%);
+            border-color: silver;
+       }
+
+       /*Botones de Iniciar Sesión y Registro*/
+       .link {
+            background: linear-gradient(90deg, rgba(218, 165, 32, 0.95) 25%, rgba(255, 255, 255, 0.80) 90%);
+            padding: 6px 10px;
+            position: relative;
+            text-decoration: none;
+            color: black;
+            border-radius: 15px; 
+            border: 2.7px solid rgb(0, 0, 0);
+        }
+       
+       .link:hover {
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.80) 25%, rgba(218,165, 32, 0.95) 90%);
+        border-color: silver;
+        }
+    }
+}
+
+/*------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
+
+.principal {
+    background-image: url("../img/fondo_chat.jpg");
+    background-repeat: no-repeat;
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    color: aliceblue;
+
+
+    .chat_izquierda {
+        background: rgba(0, 0, 0, 0.80);
+        width: 25%;
+
+        .chat_online {
+            padding: 30px;
+            color: goldenrod;
+        }
+
+        .chat_contactos {
+            overflow: auto;
+
+            .contenido_contacto {
+                background: rgba(0, 0, 0, 0.20);
+                display: flex;
+                margin: 0 auto;
+                margin-bottom: 12px;
+                width: 90%;
+                height: 85px;
+                align-items: center;
+                cursor: pointer;
+                border-radius: 16px;
+
+                .img {
+                    object-fit: cover;
+                    object-position: center top;
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                    margin: 6.5px 10px;
+                    
+                }
+
+                .nombre_hora_contenido {
+                    width: 100%;
+                    overflow: hidden;
+
+                    .nombre_hora {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 95%;
+                        padding: 5px 0px;
+
+                        .hora{
+                            font-weight: lighter;
+                        }
+                    }
+
+                    .contenido {
+                        width: 95%;
+                        display: block;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        font-weight: lighter;
+                    }
+
+                }
+
+            }
+
+        }
+ 
+    }
+
+    .chat_derecha {
+        background: rgba(0, 0, 0, 0.75);
+        width: 75%;
+        border-left: 2px solid rgba(218, 165, 32, 0.35);
+        
+        .chat_principal_cabecera{
+            display: flex;
+            padding: 25px 35px;
+            border-bottom: 0.25px solid rgba(218, 165, 32, 0.35);
+            justify-content: space-between;
+            align-items: center;
+
+            .contacto_contenido {
+                display: flex;
+                align-items: center;
+    
+                .img_contacto {
+                    position: relative;
+                    width: 45px;
+                    height: 45px;
+                    
+                    .img {
+                        object-fit: cover;
+                        object-position: center top;
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        
+                    }
+                    .circulo {
+                        background-color: green;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        border: 1px solid;
+                        position: absolute;
+                        bottom: 0px;
+                        right: 0px;
+       
+                    }
+                
+                }
+    
+                .contenido_contacto_principal {
+                    padding-left: 12px;
+                
+                    .nombre {
+                        font-weight: bolder;
+                    }
+    
+                    .estado {
+                        font-weight: lighter;
+                    }
+    
+                }
+    
+            }
+
+            .iconos {
+                display: flex;
+                width: 50px;
+                font-size: 20px;
+                justify-content: space-between;
+                color: goldenrod;
+                cursor: pointer;
+
+            }
+        }
+
+        .chat_principal_contenedor {
+            padding: 6px 20px;
+            
+
+            .mensaje_contenido_persona {
+                display: flex;
+                flex-direction: row-reverse;
+                padding: 25px 10px;
+                align-items: center;
+                justify-content: center;
+                
+                .img_usuario {
+                    object-fit: cover;
+                    object-position: center top;
+                    position: relative;
+                    bottom:-30px;
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                    margin: 6.5px 10px;
+                    cursor: pointer;
+                    
+                }
+    
+                .contenido {
+                    background: rgba(0, 0, 0, 0.35);
+                    border-radius: 15px 16px 0px 16px;
+                    padding: 15px 10px;
+                    
+                    .nombre_hora_contenido {
+                        display: flex;
+                        justify-content: space-between;
+                        padding-bottom: 6px ;
+                       
+                        .hora_usuario {
+                            padding-right: 10px;
+                        }
+                        
+                    }
+                    
+                }
+
+            }
+
+            .mensaje_contenido_abogado {
+                display: flex;
+                padding: 25px 10px;
+                align-items: center;
+                justify-content: center;
+                
+                .img_usuario {
+                    object-fit: cover;
+                    object-position: center top;
+                    position: relative;
+                    bottom:-30px;
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                    margin: 6.5px 10px;
+                    cursor: pointer;
+                    
+                }
+    
+                .contenido {
+                    background: rgba(0, 0, 0, 0.35);
+                    border-radius: 16px 16px 16px 0;
+                    padding: 15px 10px;
+                    
+                    .nombre_hora_contenido {
+                        display: flex;
+                        justify-content: space-between;
+                        padding-bottom: 6px ;
+                       
+                        .hora_usuario {
+                            padding-right: 10px;
+                        }
+                        
+                    }
+                    
+                }
+            }
+
+        }
+
+        .chat_principal_input {
+            display: flex;
+            position: fixed;
+            bottom: 0;
+            padding: 10px 20px;
+            align-items: center;
+            width: 75%;
+            border-top: 1px solid rgba(218, 165, 32, 0.35);
+
+            .input {
+                background: rgba(0, 0, 0, 0.45);
+                padding: 8px 12px;
+                width: 90%;
+                outline: none;
+                border: none;
+                font-size: 15px;
+                border-radius: 25px;
+                color: aliceblue;
+
+            }
+
+            .iconos_input {
+                display: flex;
+                justify-content: space-between;
+                width: 200px;
+                color: goldenrod;
+                font-size: 20px;
+                padding: 0 40px;
+                margin-left: -180px;
+                cursor: pointer;
+               
+            }
+
+            .boton {
+                background-color: goldenrod;
+                display: flex;
+                align-items: center;
+                height: 30px;
+                padding: 0 20px;
+                text-decoration: none;
+                color: aliceblue;
+                font-weight: bold;
+                border-radius: 10px;
+            }
+
+        }
+
+    }
+    
+}
